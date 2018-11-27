@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>时间转换指令</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div v-time="timeNow"></div>
+        <div v-time="timeBefore"></div>
+    </div>
+    
+    <script src="vue.min.js"></script>
+    <script type="text/javascript" src="time.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                timeNow : (new Date()).getTime(),
+                timeBefore: 1488930695721
+            },
+            methods:{
+                
+            }
+        });
+    </script>
+</body>
+</html>
+

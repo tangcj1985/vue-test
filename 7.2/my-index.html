@@ -1,0 +1,44 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="css/my-style.css" />
+</head>
+
+<body>
+    <h2>练习</h2>
+    <p>给pane组件新增一个prop:closable的布尔值，支持是否关闭这个pane，如果开启，tabs上会增加一个关闭按钮，可以关闭对应的标签</p>
+    <div id="app" v-cloak>
+        <my-tabs v-model="activeKey" @on-click="doSomeThing">
+            <my-pane label="标签一" name="1" closable=true>
+                标签一的内容
+            </my-pane>
+            <my-pane label="标签二" name="2" closable=true>
+                标签二的内容
+            </my-pane>
+            <my-pane label="标签三" name="3" closable=false>
+                标签三的内容
+            </my-pane>
+        </my-tabs>
+    </div>
+    <script src="js/vue.min.js"></script>
+    <script src="js/my-pane.js"></script>
+    <script src="js/my-tabs.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                activeKey: '1'
+            },
+            methods: {
+                doSomeThing: function () {
+                    // console.log("Do something!");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
